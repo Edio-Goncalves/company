@@ -49,8 +49,8 @@ License URI:
       margin: 0,
       navText: [
         '<i class="fa fa-angle-left"></i>',
-        '<i class="fa fa-angle-right"></i>'
-      ]
+        '<i class="fa fa-angle-right"></i>',
+      ],
     });
   }
 
@@ -58,7 +58,7 @@ License URI:
     / 2. Video PopUp
     /----------------------------------------------------------*/
   $(".video_popup").magnificPopup({
-    type: "iframe"
+    type: "iframe",
   });
 
   /*--------------------------------------------------------
@@ -86,7 +86,7 @@ License URI:
                 }
               }
               $this.html(num);
-            }
+            },
           }
         );
       });
@@ -105,18 +105,18 @@ License URI:
       nav: false,
       responsive: {
         0: {
-          items: 1
+          items: 1,
         },
         560: {
-          items: 2
+          items: 2,
         },
         768: {
-          items: 3
+          items: 3,
         },
         992: {
-          items: 4
-        }
-      }
+          items: 4,
+        },
+      },
     });
   }
 
@@ -138,34 +138,34 @@ License URI:
           settings: {
             centerMode: true,
             centerPadding: "40px",
-            slidesToShow: 4
-          }
+            slidesToShow: 4,
+          },
         },
         {
           breakpoint: 1199,
           settings: {
             centerMode: true,
             centerPadding: "40px",
-            slidesToShow: 3
-          }
+            slidesToShow: 3,
+          },
         },
         {
           breakpoint: 991,
           settings: {
             centerMode: true,
             centerPadding: "40px",
-            slidesToShow: 2
-          }
+            slidesToShow: 2,
+          },
         },
         {
           breakpoint: 600,
           settings: {
             centerMode: true,
             centerPadding: "30px",
-            slidesToShow: 1
-          }
-        }
-      ]
+            slidesToShow: 1,
+          },
+        },
+      ],
     });
   }
 
@@ -178,7 +178,7 @@ License URI:
       autoplay: false,
       nav: false,
       dots: true,
-      dotsContainer: ".dots_owl"
+      dotsContainer: ".dots_owl",
     });
   }
   if ($(".slider_testimoial").length > 0) {
@@ -193,116 +193,116 @@ License URI:
   /*--------------------------------------------------------
     / 7. Google Map
     /----------------------------------------------------------*/
-  if ($("#gmap").length > 0) {
-    var contact_map;
-    contact_map = new GMaps({
-      el: "#gmap",
-      lat: 40.728157,
-      lng: -74.077644,
-      scrollwheel: false,
-      zoom: 10,
-      zoomControl: false,
-      panControl: false,
-      streetViewControl: false,
-      mapTypeControl: false,
-      overviewMapControl: false,
-      clickable: false
-    });
-    contact_map.addMarker({
-      lat: 40.728157,
-      lng: -74.077644,
-      icon: "images/marker.png",
-      animation: google.maps.Animation.DROP
-    });
+  // if ($("#gmap").length > 0) {
+  //   var contact_map;
+  //   contact_map = new GMaps({
+  //     el: "#gmap",
+  //     lat: 40.728157,
+  //     lng: -74.077644,
+  //     scrollwheel: false,
+  //     zoom: 10,
+  //     zoomControl: false,
+  //     panControl: false,
+  //     streetViewControl: false,
+  //     mapTypeControl: false,
+  //     overviewMapControl: false,
+  //     clickable: false
+  //   });
+  //   contact_map.addMarker({
+  //     lat: 40.728157,
+  //     lng: -74.077644,
+  //     icon: "images/marker.png",
+  //     animation: google.maps.Animation.DROP
+  //   });
 
-    var styles = [
-      {
-        featureType: "road",
-        stylers: [{ color: "#ffffff" }]
-      },
-      {
-        featureType: "water",
-        stylers: [{ color: "#ededed" }]
-      },
-      {
-        featureType: "landscape",
-        stylers: [{ color: "#f7f7f7" }]
-      },
-      {
-        elementType: "labels.text.fill",
-        stylers: [{ color: "transparent" }]
-      },
-      {
-        featureType: "poi",
-        stylers: [{ color: "#e5e5e5" }]
-      },
-      {
-        elementType: "labels.text",
-        stylers: [{ saturation: 1 }, { weight: 0.1 }, { color: "#818181" }]
-      }
-    ];
-    contact_map.addStyle({
-      styledMapName: "Styled Map",
-      styles: styles,
-      mapTypeId: "map_style"
-    });
-    contact_map.setStyle("map_style");
-  }
+  //   var styles = [
+  //     {
+  //       featureType: "road",
+  //       stylers: [{ color: "#ffffff" }]
+  //     },
+  //     {
+  //       featureType: "water",
+  //       stylers: [{ color: "#ededed" }]
+  //     },
+  //     {
+  //       featureType: "landscape",
+  //       stylers: [{ color: "#f7f7f7" }]
+  //     },
+  //     {
+  //       elementType: "labels.text.fill",
+  //       stylers: [{ color: "transparent" }]
+  //     },
+  //     {
+  //       featureType: "poi",
+  //       stylers: [{ color: "#e5e5e5" }]
+  //     },
+  //     {
+  //       elementType: "labels.text",
+  //       stylers: [{ saturation: 1 }, { weight: 0.1 }, { color: "#818181" }]
+  //     }
+  //   ];
+  //   contact_map.addStyle({
+  //     styledMapName: "Styled Map",
+  //     styles: styles,
+  //     mapTypeId: "map_style"
+  //   });
+  //   contact_map.setStyle("map_style");
+  // }
 
-  if ($("#gmap_2").length > 0) {
-    var contact_map;
-    contact_map = new GMaps({
-      el: "#gmap_2",
-      lat: 40.728157,
-      lng: -74.077644,
-      scrollwheel: false,
-      zoom: 10,
-      zoomControl: false,
-      panControl: false,
-      streetViewControl: false,
-      mapTypeControl: false,
-      overviewMapControl: false,
-      clickable: false
-    });
-    contact_map.addMarker({
-      lat: 40.728157,
-      lng: -74.077644,
-      icon: "images/marker.png",
-      animation: google.maps.Animation.DROP
-    });
-    var styles = [
-      {
-        featureType: "road",
-        stylers: [{ color: "#ffffff" }]
-      },
-      {
-        featureType: "water",
-        stylers: [{ color: "#ededed" }]
-      },
-      {
-        featureType: "landscape",
-        stylers: [{ color: "#f7f7f7" }]
-      },
-      {
-        elementType: "labels.text.fill",
-        stylers: [{ color: "transparent" }]
-      },
-      {
-        featureType: "poi",
-        stylers: [{ color: "#e5e5e5" }]
-      },
-      {
-        elementType: "labels.text",
-        stylers: [{ saturation: 1 }, { weight: 0.1 }, { color: "#818181" }]
-      }
-    ];
-    contact_map.addStyle({
-      styledMapName: "Styled Map",
-      styles: styles,
-      mapTypeId: "map_style"
-    });
-    contact_map.setStyle("map_style");
-  }
+  // if ($("#gmap_2").length > 0) {
+  //   var contact_map;
+  //   contact_map = new GMaps({
+  //     el: "#gmap_2",
+  //     lat: 40.728157,
+  //     lng: -74.077644,
+  //     scrollwheel: false,
+  //     zoom: 10,
+  //     zoomControl: false,
+  //     panControl: false,
+  //     streetViewControl: false,
+  //     mapTypeControl: false,
+  //     overviewMapControl: false,
+  //     clickable: false
+  //   });
+  //   contact_map.addMarker({
+  //     lat: 40.728157,
+  //     lng: -74.077644,
+  //     icon: "images/marker.png",
+  //     animation: google.maps.Animation.DROP
+  //   });
+  //   var styles = [
+  //     {
+  //       featureType: "road",
+  //       stylers: [{ color: "#ffffff" }]
+  //     },
+  //     {
+  //       featureType: "water",
+  //       stylers: [{ color: "#ededed" }]
+  //     },
+  //     {
+  //       featureType: "landscape",
+  //       stylers: [{ color: "#f7f7f7" }]
+  //     },
+  //     {
+  //       elementType: "labels.text.fill",
+  //       stylers: [{ color: "transparent" }]
+  //     },
+  //     {
+  //       featureType: "poi",
+  //       stylers: [{ color: "#e5e5e5" }]
+  //     },
+  //     {
+  //       elementType: "labels.text",
+  //       stylers: [{ saturation: 1 }, { weight: 0.1 }, { color: "#818181" }]
+  //     }
+  //   ];
+  //   contact_map.addStyle({
+  //     styledMapName: "Styled Map",
+  //     styles: styles,
+  //     mapTypeId: "map_style"
+  //   });
+  //   contact_map.setStyle("map_style");
+  // }
 
   /*--------------------------------------------------------
     / 8. Portflolio Mixing
@@ -322,51 +322,51 @@ License URI:
       dots: false,
       responsive: {
         0: {
-          items: 1
+          items: 1,
         },
         600: {
-          items: 2
+          items: 2,
         },
         991: {
-          items: 3
-        }
-      }
+          items: 3,
+        },
+      },
     });
   }
 
   /*--------------------------------------------------------
     / 10. Search PopUp
     /----------------------------------------------------------*/
-  if ($(".searchToggler").length > 0) {
-    var todg = true;
-    $(".searchToggler").on("click", function (e) {
-      e.preventDefault();
-      if (todg) {
-        $(".searchFixed").fadeIn("slow");
-        todg = false;
-      } else {
-        $(".searchFixed").fadeOut("slow");
-        todg = true;
-      }
-    });
+  // if ($(".searchToggler").length > 0) {
+  //   var todg = true;
+  //   $(".searchToggler").on("click", function (e) {
+  //     e.preventDefault();
+  //     if (todg) {
+  //       $(".searchFixed").fadeIn("slow");
+  //       todg = false;
+  //     } else {
+  //       $(".searchFixed").fadeOut("slow");
+  //       todg = true;
+  //     }
+  //   });
 
-    $(document).mouseup(function (e) {
-      var container = $(".searchForms");
+  //   $(document).mouseup(function (e) {
+  //     var container = $(".searchForms");
 
-      if (!container.is(e.target) && container.has(e.target).length === 0) {
-        $(".searchFixed").fadeOut("slow");
-        todg = true;
-      }
-    });
-    $("#sfCloser").on("click", function (e) {
-      e.preventDefault();
-      $(".searchFixed").fadeOut("slow");
-      todg = true;
-    });
-  }
-  $(function () {
-    $(".singleShopWrap").themeWar();
-  });
+  //     if (!container.is(e.target) && container.has(e.target).length === 0) {
+  //       $(".searchFixed").fadeOut("slow");
+  //       todg = true;
+  //     }
+  //   });
+  //   $("#sfCloser").on("click", function (e) {
+  //     e.preventDefault();
+  //     $(".searchFixed").fadeOut("slow");
+  //     todg = true;
+  //   });
+  // }
+  // $(function () {
+  //   $(".singleShopWrap").themeWar();
+  // });
 
   /*---------------------------------------------------
     / 11. Menu PopUp
@@ -388,8 +388,8 @@ License URI:
       $(".dl-menu__wrap").dlmenu({
         animationClasses: {
           classin: "dl-animate-in-3",
-          classout: "dl-animate-out-3"
-        }
+          classout: "dl-animate-out-3",
+        },
       });
   });
 
@@ -549,7 +549,7 @@ License URI:
             l_name: l_name,
             email: email,
             phone: phone,
-            message: message
+            message: message,
           },
           success: function (data) {
             //alert(data);
@@ -558,7 +558,7 @@ License URI:
             setTimeout(function () {
               $("#con_submit").html("<span>Send Message</span>");
             }, 2500);
-          }
+          },
         });
       } else {
         $("#con_submit").html("<span>Failed!</span>");
@@ -573,26 +573,26 @@ License URI:
   /*--------------------------------------------------------
     / 18. Color Preset
     /----------------------------------------------------------*/
-  if ($(".color_settings").length > 0) {
-    var switchs = true;
-    $(".switch-btn").on("click", function (e) {
-      e.preventDefault();
-      if (switchs) {
-        $(this).addClass("active");
-        $(".color_settings").animate({ left: "0px" }, 400);
-        switchs = false;
-      } else {
-        $(this).removeClass("active");
-        $(".color_settings").animate({ left: "-240px" }, 400);
-        switchs = true;
-      }
-    });
-    $(".color_preset button").on("click", function (e) {
-      e.preventDefault();
-      var color = $(this).attr("id");
-      $(".color_preset button").removeClass("active");
-      $(this).addClass("active");
-      $("#colorChange").attr("href", "css/presets/" + color + ".css");
-    });
-  }
+  // if ($(".color_settings").length > 0) {
+  //   var switchs = true;
+  //   $(".switch-btn").on("click", function (e) {
+  //     e.preventDefault();
+  //     if (switchs) {
+  //       $(this).addClass("active");
+  //       $(".color_settings").animate({ left: "0px" }, 400);
+  //       switchs = false;
+  //     } else {
+  //       $(this).removeClass("active");
+  //       $(".color_settings").animate({ left: "-240px" }, 400);
+  //       switchs = true;
+  //     }
+  //   });
+  //   $(".color_preset button").on("click", function (e) {
+  //     e.preventDefault();
+  //     var color = $(this).attr("id");
+  //     $(".color_preset button").removeClass("active");
+  //     $(this).addClass("active");
+  //     $("#colorChange").attr("href", "css/presets/" + color + ".css");
+  //   });
+  // }
 })(jQuery);
